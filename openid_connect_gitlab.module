@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains openid_connect_gitlab.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function openid_connect_gitlab_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the openid_connect_gitlab module.
+    case 'help.page.openid_connect_gitlab':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('OpenID Connect Plugin for Gitlab') . '</p>';
+      return $output;
+
+    default:
+  }
+}

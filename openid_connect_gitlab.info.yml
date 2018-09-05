@@ -1,0 +1,7 @@
+name: 'OpenID Connect Gitlab'
+type: module
+description: 'OpenID Connect Plugin for Gitlab'
+core: 8.x
+package: 'Other'
+dependencies:
+    - openid_connect:openid_connect
