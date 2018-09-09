@@ -25,8 +25,19 @@ class Gitlab extends OpenIDConnectClientBase {
     $form = parent::buildConfigurationForm($form, $form_state);
     $form['baseUrl'] = [
       '#title' => 'Your Gitlab Base URL',
+      '#description' => $this->t('The Base URL of your Gitlab Installation'),
       '#type' => 'textfield',
       '#default_value' => $this->configuration['baseUrl'],
+    ];
+    $form['apiVersion'] = [
+      '#title' => 'Gitlab User API Version',
+      '#description' => $this->t('If you do not know what version your Gitlab use v4. More information can be found here https://docs.gitlab.com/ce/api/v3_to_v4.html'),
+      '#type' => 'select',
+      '#options' => [
+        'v3' => 'v3',
+        'v4' => 'v4',
+      ],
+      '#default_value' => $this->configuration['apiVersion'],
     ];
     return $form;
   }
@@ -82,10 +93,11 @@ class Gitlab extends OpenIDConnectClientBase {
    * {@inheritdoc}
    */
   public function getEndpoints() {
+    $user_info_url = $this->configuration['baseUrl'] . '/api/' . $this->configuration['apiVersion'] . '/user';
     return [
       'authorization' => $this->configuration['baseUrl'] . '/oauth/authorize',
       'token' => $this->configuration['baseUrl'] . '/oauth/token',
-      'userinfo' => $this->configuration['baseUrl'] . '/api/v4/user',
+      'userinfo' => $user_info_url,
     ];
   }
 

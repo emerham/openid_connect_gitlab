@@ -17,3 +17,6 @@ openid_connect_gitlab.settings.gitlab:
         baseUrl:
           type: string
           label: 'Base URL'
+        apiVersion:
+          type: string
+          label: 'API Version'
