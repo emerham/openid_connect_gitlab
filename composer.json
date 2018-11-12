@@ -1,5 +1,5 @@
 {
-  "name": "drupal/openid_connect_gitlab",
+  "name": "emerham/openid_connect_gitlab",
   "type": "drupal-module",
   "description": "OpenID Connect Plugin for Gitlab",
   "keywords": ["Drupal"],

@@ -5,3 +5,4 @@ core: 8.x
 package: 'Other'
 dependencies:
     - openid_connect:openid_connect
+version: 8.x-1.0
