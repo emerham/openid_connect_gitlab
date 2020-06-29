@@ -29,16 +29,6 @@ class OpenIDConnectGitlabClient extends OpenIDConnectClientBase {
       '#type' => 'textfield',
       '#default_value' => $this->configuration['baseUrl'],
     ];
-    $form['apiVersion'] = [
-      '#title' => 'GitLab User API Version',
-      '#description' => $this->t('If you do not know what version your GitLab use v4. More information can be found here https://docs.gitlab.com/ce/api/v3_to_v4.html'),
-      '#type' => 'select',
-      '#options' => [
-        'v3' => 'v3',
-        'v4' => 'v4',
-      ],
-      '#default_value' => $this->configuration['apiVersion'],
-    ];
     return $form;
   }
 
