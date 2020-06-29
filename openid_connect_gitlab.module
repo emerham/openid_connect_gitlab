@@ -16,7 +16,7 @@ function openid_connect_gitlab_help($route_name, RouteMatchInterface $route_matc
     case 'help.page.openid_connect_gitlab':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('OpenID Connect Plugin for Gitlab') . '</p>';
+      $output .= '<p>' . t('OpenID Connect Plugin for OpenIDConnectGitlabClient') . '</p>';
       return $output;
 
     default:

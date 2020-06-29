@@ -1,6 +1,6 @@
 openid_connect_gitlab.settings.gitlab:
   type: config_object
-  label: 'OpenID Connect Gitlab settings'
+  label: 'OpenID Connect GitLab settings'
   mapping:
     enabled:
       type: boolean
@@ -17,6 +17,3 @@ openid_connect_gitlab.settings.gitlab:
         baseUrl:
           type: string
           label: 'Base URL'
-        apiVersion:
-          type: string
-          label: 'API Version'

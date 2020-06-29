@@ -7,16 +7,16 @@ use Drupal\openid_connect\Plugin\OpenIDConnectClientBase;
 use Exception;
 
 /**
- * Gitlab OpenID Connect client.
+ * OpenIDConnectGitlabClient OpenID Connect client.
  *
- * Implements OpenID Connect Client plugin for Gitlab.
+ * Implements OpenID Connect Client plugin for OpenIDConnectGitlabClient.
  *
  * @OpenIDConnectClient(
  *   id = "gitlab",
- *   label = @Translation("Gitlab")
+ *   label = @Translation("GitLab")
  * )
  */
-class Gitlab extends OpenIDConnectClientBase {
+class OpenIDConnectGitlabClient extends OpenIDConnectClientBase {
 
   /**
    * {@inheritdoc}
@@ -24,14 +24,14 @@ class Gitlab extends OpenIDConnectClientBase {
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form = parent::buildConfigurationForm($form, $form_state);
     $form['baseUrl'] = [
-      '#title' => 'Your Gitlab Base URL',
-      '#description' => $this->t('The Base URL of your Gitlab Installation'),
+      '#title' => 'Your GitLab Base URL',
+      '#description' => $this->t('The Base URL of your GitLab Installation'),
       '#type' => 'textfield',
       '#default_value' => $this->configuration['baseUrl'],
     ];
     $form['apiVersion'] = [
-      '#title' => 'Gitlab User API Version',
-      '#description' => $this->t('If you do not know what version your Gitlab use v4. More information can be found here https://docs.gitlab.com/ce/api/v3_to_v4.html'),
+      '#title' => 'GitLab User API Version',
+      '#description' => $this->t('If you do not know what version your GitLab use v4. More information can be found here https://docs.gitlab.com/ce/api/v3_to_v4.html'),
       '#type' => 'select',
       '#options' => [
         'v3' => 'v3',

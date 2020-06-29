@@ -1,14 +1,16 @@
 {
   "name": "emerham/openid_connect_gitlab",
   "type": "drupal-module",
-  "description": "OpenID Connect Plugin for Gitlab",
+  "description": "OpenID Connect Plugin for GitLab",
   "keywords": ["Drupal"],
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://www.drupal.org/project/openid_connect_gitlab",
   "minimum-stability": "dev",
   "support": {
     "issues": "https://www.drupal.org/project/issues/openid_connect_gitlab",
     "source": "http://cgit.drupalcode.org/openid_connect_gitlab"
   },
-  "require": { }
+  "require": {
+    "ext-json": "*"
+  }
 }
