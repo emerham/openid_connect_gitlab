@@ -83,11 +83,10 @@ class OpenIDConnectGitlabClient extends OpenIDConnectClientBase {
    * {@inheritdoc}
    */
   public function getEndpoints() {
-    $user_info_url = $this->configuration['baseUrl'] . '/api/' . $this->configuration['apiVersion'] . '/user';
     return [
       'authorization' => $this->configuration['baseUrl'] . '/oauth/authorize',
       'token' => $this->configuration['baseUrl'] . '/oauth/token',
-      'userinfo' => $user_info_url,
+      'userinfo' => $this->configuration['baseUrl'] . '/api/v4/user',
     ];
   }
 
